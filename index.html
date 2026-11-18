@@ -3,343 +3,436 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Projeto Integrador sobre tecnologia, acessibilidade e qualidade de vida.">
-  <title>Projeto Integrador | Tecnologia e Inclusão</title>
+  <title>Projeto Integrador 2º Ano | Tecnologia, Ética e Qualidade de Vida</title>
   <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
 </head>
 <body>
+
+  <!-- CABEÇALHO E MENU DE NAVEGAÇÃO -->
   <header class="site-header">
-    <a class="brand" href="#inicio" data-page-link="inicio"><span class="brand-mark">✿</span> Projeto Integrador</a>
-    <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">☰</button>
-    <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
-      <button class="nav-tab active" type="button" data-page="inicio">Início</button>
-      <button class="nav-tab" type="button" data-page="programacao">Programação</button>
-      <button class="nav-tab" type="button" data-page="robotica">Robótica</button>
-      <button class="nav-tab" type="button" data-page="tecnociencia">Física e TecnoCiência</button>
-    </nav>
+    <div class="header-container">
+      <div class="brand">
+        <span class="brand-badge">Projeto Integrador • 2º Ano</span>
+        <h1>Ciência, Tecnologia & Inclusão</h1>
+      </div>
+
+      <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-label="Abrir menu de navegação">
+        ☰ Menu
+      </button>
+
+      <nav id="main-nav" class="main-nav">
+        <button class="nav-tab active" data-page="introducao">Introdução</button>
+        <button class="nav-tab" data-page="programacao">Programação</button>
+        <button class="nav-tab" data-page="robotica">Robótica</button>
+        <button class="nav-tab" data-page="fisica">Física e Tecnociência</button>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section class="page active" id="inicio" aria-labelledby="titulo-inicio">
-      <div class="hero">
-        <div class="hero-decoration decoration-one"></div>
-        <div class="hero-decoration decoration-two"></div>
-        <div class="hero-content">
-          <span class="eyebrow">PROJETO INTEGRADOR · 2026</span>
-          <h1 id="titulo-inicio">Tecnologia que aproxima,<br><span>inclui e transforma.</span></h1>
-          <p>Uma investigação sobre como a programação, a robótica, a ciência e a Inteligência Artificial podem contribuir para a acessibilidade e a qualidade de vida.</p>
-          <button class="primary-button" type="button" data-go="programacao">Conhecer os trabalhos <span aria-hidden="true">→</span></button>
-        </div>
-        <div class="hero-orbit" aria-hidden="true"><span>✦</span><span>♡</span><span>✿</span></div>
-      </div>
+  <main class="main-content">
 
-      <div class="container section-space">
-        <div class="section-heading">
-          <span class="eyebrow">NOSSAS DISCIPLINAS</span>
-          <h2>Três áreas, um propósito</h2>
-          <p>Explore as atividades desenvolvidas em cada disciplina.</p>
-        </div>
-        <div class="discipline-grid">
-          <article class="discipline-card card-pink">
-            <div class="card-icon">⌨</div><span class="card-number">01</span>
-            <h3>Programação</h3>
-            <p>Criação de programas para organizar informações, facilitar a leitura e realizar cálculos.</p>
-            <button class="text-button" type="button" data-go="programacao">Explorar atividade <span>→</span></button>
-          </article>
-          <article class="discipline-card card-blue">
-            <div class="card-icon">▦</div><span class="card-number">02</span>
-            <h3>Robótica</h3>
-            <p>Simulações com componentes eletrônicos e diferentes formas de transmitir informações.</p>
-            <button class="text-button" type="button" data-go="robotica">Explorar atividade <span>→</span></button>
-          </article>
-          <article class="discipline-card card-green">
-            <div class="card-icon">∿</div><span class="card-number">03</span>
-            <h3>Física e TecnoCiência</h3>
-            <p>Investigação dos níveis sonoros na escola e reflexão sobre conforto acústico e inclusão.</p>
-            <button class="text-button" type="button" data-go="tecnociencia">Explorar atividade <span>→</span></button>
-          </article>
+    <!-- ==========================================================
+         PÁGINA 1: INTRODUÇÃO GERAL DO PROJETO
+         ========================================================== -->
+    <section id="introducao" class="page active">
+      <div class="hero-card">
+        <span class="pill pill-mint">Aprendizagem Baseada em Projetos (ABP)</span>
+        <h2>Tecnologia, Ética e Qualidade de Vida</h2>
+        <p class="lead">
+          Neste projeto integrador, deixamos de ser apenas estudantes assistindo a aulas para nos tornarmos desenvolvedores de soluções tecnológicas reais voltadas à acessibilidade, segurança e bem-estar.
+        </p>
+        <div class="motriz-box">
+          <strong>Questão Motriz:</strong>
+          <p>“Como a ciência, a tecnologia e as ferramentas de Inteligência Artificial podem contribuir para a melhoria da qualidade de vida das pessoas?”</p>
         </div>
       </div>
 
-      <section class="question-band">
-        <div class="container question-inner">
-          <span class="eyebrow">QUESTÃO MOTRIZ</span>
-          <h2>Como a ciência, a tecnologia e as ferramentas de Inteligência Artificial podem contribuir para a melhoria da qualidade de vida das pessoas?</h2>
-        </div>
-      </section>
-      <div class="container note-strip"><span>✧</span><p>Este site reúne os registros, as explicações, os códigos e as análises do Projeto Integrador.</p></div>
+      <h3 class="section-title">Explore as Disciplinas do Projeto</h3>
+      <div class="cards-grid three-cols">
+        <article class="card card-mint">
+          <span class="card-tag">Eixo 1</span>
+          <h3>Programação</h3>
+          <p>Desenvolvimento de um Cofre Digital criptografado, análise de Engenharia de Prompt para leitura facilitada e um Modelo Computacional de Nutrição.</p>
+          <button class="btn btn-primary" data-go="programacao">Acessar Programação →</button>
+        </article>
+
+        <article class="card card-pink">
+          <span class="card-tag">Eixo 2</span>
+          <h3>Robótica</h3>
+          <p>Simulações com Arduino Uno no Tinkercad explorando comunicação visual, sonora e textual: Matriz de LEDs 8×8, Código Morse e Display LCD 16×2.</p>
+          <button class="btn btn-primary" data-go="robotica">Acessar Robótica →</button>
+        </article>
+
+        <article class="card card-blue">
+          <span class="card-tag">Eixo 3</span>
+          <h3>Física e Tecnociência</h3>
+          <p>Investigação da ciência do som, audição humana, poluição sonora na escola (medições em dB) e propostas de acessibilidade sensorial.</p>
+          <button class="btn btn-primary" data-go="fisica">Acessar Física →</button>
+        </article>
+      </div>
     </section>
 
-    <section class="page" id="programacao" aria-labelledby="titulo-programacao">
-      <div class="page-banner banner-pink">
-        <span class="eyebrow">DISCIPLINA 01</span><h1 id="titulo-programacao">Programação</h1>
-        <p>O código como ferramenta para organizar, proteger e tornar informações mais acessíveis.</p>
+    <!-- ==========================================================
+         PÁGINA 2: PROGRAMAÇÃO
+         ========================================================== -->
+    <section id="programacao" class="page">
+      <div class="page-header header-mint">
+        <span class="pill pill-mint">Disciplina 1</span>
+        <h2>PROGRAMAÇÃO — Tecnologia que facilita a vida</h2>
+        <p>Exploramos como a programação em Python e a Inteligência Artificial contribuem para a segurança digital, a acessibilidade educacional e a saúde.</p>
       </div>
-      <div class="container page-content">
-        <div class="section-heading left">
-          <span class="eyebrow">ATIVIDADES DESENVOLVIDAS</span><h2>Programação aplicada à qualidade de vida</h2>
-          <p>As atividades exploram segurança da informação, acessibilidade textual e processamento de dados.</p>
+
+      <!-- Resumo das 3 atividades -->
+      <div class="cards-grid three-cols">
+        <div class="card card-lilac">
+          <h4>1. Cofre Digital</h4>
+          <p>Proteção de dados médicos de emergência utilizando criptografia, derivação de chaves e verificação de integridade.</p>
+        </div>
+        <div class="card card-yellow">
+          <h4>2. Leitura Facilitada</h4>
+          <p>Engenharia de Prompt aplicada a Modelos de Linguagem (LLMs) para tornar textos científicos acessíveis.</p>
+        </div>
+        <div class="card card-mint">
+          <h4>3. Calculadora Nutricional</h4>
+          <p>Modelo computacional com dicionários em Python para automatizar cálculos alimentares e apoiar dietas.</p>
+        </div>
+      </div>
+
+      <!-- ATIVIDADE 1: COFRE DIGITAL -->
+      <article class="content-section">
+        <h3>Atividade 1 — Cofre Digital de Saúde e Emergência Médica</h3>
+        <p>
+          O objetivo foi desenvolver um programa interativo em Python capaz de cadastrar informações pessoais críticas (nome, tipo sanguíneo, alergias, medicamentos, contato de emergência, médico e plano de saúde) e armazená-las protegidas por senha no arquivo <code>cofre_saude.txt</code>.
+        </p>
+
+        <div class="two-cols">
+          <div class="info-box">
+            <h4>Conceitos de Segurança & Criptografia</h4>
+            <ul>
+              <li><strong>Hash & SHA-256:</strong> Transforma dados em uma assinatura de 256 bits para verificação.</li>
+              <li><strong>PBKDF2:</strong> Deriva chaves seguras combinando a senha, um valor aleatório (sal) e 200.000 iterações.</li>
+              <li><strong>HMAC:</strong> Garante a integridade e autenticidade, impedindo que dados adulterados sejam abertos.</li>
+              <li><strong>XOR & Base64:</strong> Operação lógica de transformação binária e codificação textual para armazenamento em JSON.</li>
+            </ul>
+          </div>
+          <div class="info-box warning-box">
+            <h4>Limitações e Uso Ético</h4>
+            <p>
+              Esta implementação possui finalidade <strong>didática</strong>. O uso de XOR com fluxo derivado de SHA-256 e Base64 não substitui bibliotecas profissionais de criptografia autenticada (como AES-GCM). Por isso, o programa deve ser testado apenas com dados fictícios.
+            </p>
+          </div>
         </div>
 
-        <article class="content-card">
-          <div class="activity-label pink-label">ATIVIDADE 1</div>
-          <h2>🔐 Cofre Digital de Saúde e Emergência Médica</h2>
-          <h3>Objetivo</h3>
-          <p>Demonstrar como informações importantes para uma situação de emergência podem ser organizadas em um arquivo protegido por senha.</p>
-          <h3>Como funciona</h3>
-          <p>O programa solicita informações como nome, tipo sanguíneo, alergias, medicamentos, contato de emergência, médico, telefone do médico e plano de saúde. Depois, solicita a criação e a confirmação de uma senha.</p>
-          <div class="concept-grid">
-            <div><strong>PBKDF2-HMAC-SHA256</strong><span>Deriva uma chave a partir da senha e de um salt.</span></div>
-            <div><strong>SHA-256</strong><span>Função hash utilizada no processo de derivação e no fluxo didático.</span></div>
-            <div><strong>HMAC</strong><span>Permite verificar se o conteúdo armazenado foi alterado.</span></div>
-            <div><strong>Base64 e JSON</strong><span>Representação textual e organização dos dados.</span></div>
+        <div class="code-wrapper">
+          <div class="code-header">
+            <span>Código Python — Cofre Digital (Cofre_Digital.ipynb)</span>
+            <button class="copy-btn" data-copy="code-cofre">Copiar código</button>
           </div>
-          <h3>Bibliotecas utilizadas</h3>
-          <ul class="pretty-list">
-            <li><code>getpass</code>: recebe a senha sem exibi-la na tela.</li>
-            <li><code>json</code>: organiza os dados em estrutura de texto.</li>
-            <li><code>os</code>: auxilia em operações e geração de salt.</li>
-            <li><code>base64</code>: codifica os dados em uma representação textual.</li>
-            <li><code>hashlib</code>: disponibiliza funções de hash e derivação de chave.</li>
-            <li><code>hmac</code>: calcula e confere um código de autenticação.</li>
-          </ul>
-          <div class="warning-box"><strong>Importante sobre segurança:</strong> a versão didática descrita utiliza uma transformação XOR com SHA-256, além de Base64. Isso não equivale a uma criptografia profissional autenticada. É um protótipo escolar: não utilize dados médicos ou pessoais reais e não o use para proteger informações importantes.</div>
-          <h3>Testes relatados</h3>
-          <p>Na atividade, a tentativa com senha incorreta foi rejeitada. Com a senha correta, os dados armazenados foram apresentados. O código Python original deve ser anexado ou conferido com o arquivo do Colab antes da entrega; esta página explica o funcionamento sem inventar uma versão original.</p>
-        </article>
+          <pre><code id="code-cofre">import json
+import os
+import base64
+import hashlib
+import hmac
+import getpass
 
-        <article class="content-card">
-          <div class="activity-label purple-label">ATIVIDADE 2</div>
-          <h2>🤖 Inteligência Artificial e leitura facilitada</h2>
-          <p>O objetivo foi observar como uma ferramenta de IA pode adaptar um texto científico para facilitar a compreensão, preservando suas informações principais.</p>
-          <h3>Texto original</h3>
-          <blockquote>A fotossíntese é um processo bioquímico realizado pelos organismos autotróficos, no qual a energia luminosa é convertida em energia química, permitindo a produção de compostos orgânicos a partir de água e dióxido de carbono.</blockquote>
-          <div class="comparison-grid">
-            <div class="comparison-box soft-yellow">
-              <span class="mini-label">PROMPT SIMPLES</span>
-              <p>“Explique esse texto de uma maneira mais simples e fácil de entender.”</p>
-              <h3>Resposta</h3>
-              <p>A fotossíntese é o processo pelo qual as plantas usam a luz do Sol, a água e o gás carbônico para produzir seu próprio alimento.</p>
-            </div>
-            <div class="comparison-box soft-lilac">
-              <span class="mini-label">PROMPT DETALHADO</span>
-              <p>“Reescreva o texto utilizando palavras simples e frases curtas. Explique os termos científicos de maneira fácil, mantenha as informações principais do texto original e não acrescente informações que não estejam presentes nele.”</p>
-              <h3>Resposta</h3>
-              <p>A fotossíntese é um processo realizado pelas plantas e outros organismos. Nesse processo, eles utilizam a luz para produzir energia química. Para isso, usam água e gás carbônico e produzem substâncias orgânicas.</p>
-            </div>
-          </div>
-          <h3>Comparação e reflexão</h3>
-          <p>A resposta simples é mais direta. A detalhada preserva explicitamente mais elementos do texto original. A IA pode apoiar a acessibilidade, mas o resultado precisa ser conferido por uma pessoa para evitar erros ou perda de sentido.</p>
-        </article>
-                <article class="content-card">
-          <div class="activity-label green-label">ATIVIDADE 3</div>
-          <h2>🍎 Modelo Computacional de Nutrição</h2>
-          <p>O programa permite selecionar alimentos, informar quantidades em gramas e calcular valores nutricionais aproximados. Também permite adicionar vários alimentos e somar os resultados.</p>
-          <h3>Tabela nutricional de referência</h3>
-          <p class="small-muted">Valores aproximados por 100 g de alimento.</p>
-          <div class="table-wrapper">
-            <table>
-              <thead>
-                <tr><th>Alimento</th><th>Energia</th><th>Carboidratos</th><th>Proteínas</th><th>Gorduras</th><th>Fibras</th><th>Sódio</th></tr>
-              </thead>
-              <tbody>
-                <tr><td>Arroz branco cozido</td><td>128 kcal</td><td>28,1 g</td><td>2,5 g</td><td>0,2 g</td><td>1,6 g</td><td>1 mg</td></tr>
-                <tr><td>Feijão carioca cozido</td><td>76 kcal</td><td>13,6 g</td><td>4,8 g</td><td>0,5 g</td><td>8,5 g</td><td>2 mg</td></tr>
-                <tr><td>Frango grelhado</td><td>159 kcal</td><td>0 g</td><td>32 g</td><td>2,5 g</td><td>0 g</td><td>50 mg</td></tr>
-                <tr><td>Banana</td><td>98 kcal</td><td>26 g</td><td>1,3 g</td><td>0,1 g</td><td>2 g</td><td>0 mg</td></tr>
-                <tr><td>Maçã</td><td>56 kcal</td><td>15,2 g</td><td>0,3 g</td><td>0 g</td><td>1,3 g</td><td>0 mg</td></tr>
-                <tr><td>Ovo cozido</td><td>146 kcal</td><td>0,6 g</td><td>13,3 g</td><td>9,5 g</td><td>0 g</td><td>146 mg</td></tr>
-                <tr><td>Batata cozida</td><td>52 kcal</td><td>11,9 g</td><td>1,2 g</td><td>0 g</td><td>1,3 g</td><td>2 mg</td></tr>
-              </tbody>
-            </table>
+ARQUIVO = "cofre_saude.txt"
+ITERACOES = 200_000
+
+def gerar_chaves(senha, sal):
+    chaves = hashlib.pbkdf2_hmac("sha256", senha.encode("utf-8"), sal, ITERACOES, dklen=64)
+    return chaves[:32], chaves[32:]
+
+def gerar_fluxo(chave, tamanho):
+    fluxo = b""
+    contador = 0
+    while len(fluxo) < tamanho:
+        bloco = hmac.new(chave, contador.to_bytes(8, "big"), hashlib.sha256).digest()
+        fluxo += bloco
+        contador += 1
+    return fluxo[:tamanho]
+
+def aplicar_xor(dados, chave):
+    fluxo = gerar_fluxo(chave, len(dados))
+    return bytes(a ^ b for a, b in zip(dados, fluxo))
+
+def criptografar(dados, senha):
+    sal = os.urandom(16)
+    dados_bytes = dados.encode("utf-8")
+    chave_criptografia, chave_integridade = gerar_chaves(senha, sal)
+    dados_protegidos = aplicar_xor(dados_bytes, chave_criptografia)
+    assinatura = hmac.new(chave_integridade, sal + dados_protegidos, hashlib.sha256).digest()
+
+    pacote = {
+        "sal": base64.b64encode(sal).decode("utf-8"),
+        "dados": base64.b64encode(dados_protegidos).decode("utf-8"),
+        "assinatura": base64.b64encode(assinatura).decode("utf-8")
+    }
+    return json.dumps(pacote)
+
+def descriptografar(conteudo, senha):
+    pacote = json.loads(conteudo)
+    sal = base64.b64decode(pacote["sal"])
+    dados_protegidos = base64.b64decode(pacote["dados"])
+    assinatura_original = base64.b64decode(pacote["assinatura"])
+
+    chave_criptografia, chave_integridade = gerar_chaves(senha, sal)
+    assinatura_calculada = hmac.new(chave_integridade, sal + dados_protegidos, hashlib.sha256).digest()
+
+    if not hmac.compare_digest(assinatura_original, assinatura_calculada):
+        raise ValueError("Senha incorreta ou dados alterados.")
+
+    dados_bytes = aplicar_xor(dados_protegidos, chave_criptografia)
+    return dados_bytes.decode("utf-8")</code></pre>
+        </div>
+      </article>
+
+      <!-- ATIVIDADE 2: ENGENHARIA DE PROMPT -->
+      <article class="content-section">
+        <h3>Atividade 2 — Engenharia de Prompt e Leitura Facilitada com IA</h3>
+        <p>
+          Investigamos como pequenas mudanças nas instruções dadas a um Modelo de Linguagem (LLM) alteram a acessibilidade de textos científicos.
+        </p>
+
+        <div class="quote-box">
+          <strong>Texto Científico Original:</strong>
+          <p>“A fotossíntese é um processo bioquímico realizado pelos organismos autotróficos, no qual a energia luminosa é convertida em energia química, permitindo a produção de compostos orgânicos a partir de água e dióxido de carbono.”</p>
+        </div>
+
+        <div class="two-cols">
+          <div class="card card-yellow">
+            <h4>Experimento 1: Prompt Simples</h4>
+            <p><strong>Comando:</strong> “Explique esse texto de uma maneira mais simples e fácil de entender.”</p>
+            <p><strong>Resposta da IA:</strong> “A fotossíntese é o processo pelo qual as plantas usam a luz do Sol, a água e o gás carbônico para produzir seu próprio alimento.”</p>
+            <p class="small-note"><em>Análise:</em> Resposta curta e direta, mas omitiu conceitos importantes como "energia química" e "outros organismos" além das plantas.</p>
           </div>
 
-          <div class="calculator-box">
-            <span class="eyebrow">EXPERIMENTE O MODELO</span>
-            <h3>Calculadora nutricional</h3>
-            <p>Escolha um alimento e informe a quantidade em gramas.</p>
-            <div class="calculator-controls">
-              <label for="food-select">Alimento</label>
+          <div class="card card-mint">
+            <h4>Experimento 2: Prompt Detalhado</h4>
+            <p><strong>Comando:</strong> “Reescreva o texto utilizando palavras simples e frases curtas. Explique os termos científicos de maneira fácil, mantenha as informações principais do texto original e não acrescente informações que não estejam presentes nele.”</p>
+            <p><strong>Resposta da IA:</strong> “A fotossíntese é um processo realizado pelas plantas e outros organismos. Nesse processo, eles utilizam a luz para produzir energia química. Para isso, usam água e gás carbônico e produzem substâncias orgânicas.”</p>
+            <p class="small-note"><em>Análise:</em> Preservou o rigor científico do texto original mantendo a linguagem acessível.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- ATIVIDADE 3: CALCULADORA NUTRICIONAL -->
+      <article class="content-section">
+        <h3>Atividade 3 — Modelo Computacional de Nutrição</h3>
+        <p>
+          Utilizando <strong>dicionários em Python</strong> e regra de três simples (<code>(gramas ÷ 100) × valor_nutricional</code>), criamos um sistema para auxiliar idosos, pessoas em reabilitação alimentar ou com restrições (como diabetes e hipertensão) a monitorar nutrientes.
+        </p>
+
+        <!-- CALCULADORA INTERATIVA JS -->
+        <div class="calculator-panel">
+          <h4>Simulador Interativo da Calculadora Nutricional</h4>
+          <p class="small-note">Esta versão interativa reproduz em JavaScript a lógica desenvolvida originalmente em Python.</p>
+
+          <div class="calc-controls">
+            <div class="field">
+              <label for="food-select">Selecione o alimento (base 100g):</label>
               <select id="food-select">
-                <option value="arroz">Arroz branco cozido</option>
-                <option value="feijao">Feijão carioca cozido</option>
-                <option value="frango">Frango grelhado</option>
-                <option value="banana">Banana</option>
-                <option value="maca">Maçã</option>
-                <option value="ovo">Ovo cozido</option>
-                <option value="batata">Batata cozida</option>
+                <option value="arroz">Arroz branco cozido (128 kcal)</option>
+                <option value="feijao">Feijão carioca cozido (76 kcal)</option>
+                <option value="frango">Frango grelhado (159 kcal)</option>
+                <option value="banana">Banana (98 kcal)</option>
+                <option value="maca">Maçã (56 kcal)</option>
+                <option value="ovo">Ovo cozido (146 kcal)</option>
+                <option value="batata">Batata cozida (52 kcal)</option>
               </select>
-              <label for="food-grams">Quantidade (g)</label>
-              <input id="food-grams" type="number" min="1" step="1" placeholder="Ex.: 100">
-              <div class="calculator-buttons">
-                <button class="primary-button" id="calculate-food" type="button">Adicionar alimento</button>
-                <button class="secondary-button" id="clear-foods" type="button">Limpar</button>
-              </div>
             </div>
-            <p id="nutrition-message" class="feedback" role="status" aria-live="polite"></p>
-            <div id="food-list" class="food-list"></div>
-            <h3>Resultado total</h3>
-            <div class="nutrition-results" id="nutrition-results">
-              <div><strong id="total-calories">0</strong><span>kcal</span></div>
-              <div><strong id="total-carbs">0 g</strong><span>Carboidratos</span></div>
-              <div><strong id="total-protein">0 g</strong><span>Proteínas</span></div>
-              <div><strong id="total-fat">0 g</strong><span>Gorduras</span></div>
-              <div><strong id="total-fiber">0 g</strong><span>Fibras</span></div>
-              <div><strong id="total-sodium">0 mg</strong><span>Sódio</span></div>
+
+            <div class="field">
+              <label for="food-grams">Quantidade (em gramas):</label>
+              <input type="number" id="food-grams" min="1" placeholder="Ex: 150">
+            </div>
+
+            <div class="calc-buttons">
+              <button type="button" id="calculate-food" class="btn btn-primary">Adicionar Alimento</button>
+              <button type="button" id="clear-foods" class="btn btn-secondary">Limpar Lista</button>
             </div>
           </div>
-          <h3>Teste realizado</h3>
-          <p>Um dos testes informados foi a seleção de banana com 500 g. O resultado foi de aproximadamente 490 kcal, 130 g de carboidratos, 6,5 g de proteínas, 0,5 g de gorduras, 10 g de fibras e 0 mg de sódio.</p>
-          <p>Também foi observado que uma entrada de texto em um campo numérico pode gerar um erro de conversão, que deve ser tratado pelo programa.</p>
-          <div class="warning-box"><strong>Atenção:</strong> os valores são aproximados e podem variar conforme o alimento e o preparo. A calculadora é uma demonstração de programação, não uma ferramenta de orientação nutricional ou médica.</div>
-        </article>
 
-        <div class="conclusion-card">
-          <span>✧</span>
-          <div><h2>Conclusão da disciplina</h2><p>As atividades demonstram que a programação pode organizar informações, adaptar conteúdos e realizar cálculos. Quando desenvolvida com responsabilidade, pode contribuir para a acessibilidade e para a qualidade de vida.</p></div>
+          <p id="nutrition-message" class="status-msg" aria-live="polite"></p>
+
+          <div id="food-list" class="food-list"></div>
+
+          <div class="totals-grid">
+            <div class="total-item"><span>Calorias</span><strong id="total-calories">0</strong></div>
+            <div class="total-item"><span>Carboidratos</span><strong id="total-carbs">0 g</strong></div>
+            <div class="total-item"><span>Proteínas</span><strong id="total-protein">0 g</strong></div>
+            <div class="total-item"><span>Gorduras</span><strong id="total-fat">0 g</strong></div>
+            <div class="total-item"><span>Fibras</span><strong id="total-fiber">0 g</strong></div>
+            <div class="total-item"><span>Sódio</span><strong id="total-sodium">0 mg</strong></div>
+          </div>
         </div>
+
+        <div class="code-wrapper">
+          <div class="code-header">
+            <span>Código Python Original — Calculadora Nutricional (Calculadora_Nutricional.ipynb)</span>
+            <button class="copy-btn" data-copy="code-nutri">Copiar código</button>
+          </div>
+          <pre><code id="code-nutri">alimentos = {
+    "Arroz branco cozido": {"calorias": 128, "carboidratos": 28.1, "proteinas": 2.5, "gorduras": 0.2, "fibras": 1.6, "sodio": 1},
+    "Feijão carioca cozido": {"calorias": 76, "carboidratos": 13.6, "proteinas": 4.8, "gorduras": 0.5, "fibras": 8.5, "sodio": 2},
+    "Frango grelhado": {"calorias": 159, "carboidratos": 0, "proteinas": 32, "gorduras": 2.5, "fibras": 0, "sodio": 50},
+    "Banana": {"calorias": 98, "carboidratos": 26, "proteinas": 1.3, "gorduras": 0.1, "fibras": 2, "sodio": 0},
+    "Maçã": {"calorias": 56, "carboidratos": 15.2, "proteinas": 0.3, "gorduras": 0, "fibras": 1.3, "sodio": 0},
+    "Ovo cozido": {"calorias": 146, "carboidratos": 0.6, "proteinas": 13.3, "gorduras": 9.5, "fibras": 0, "sodio": 146},
+    "Batata cozida": {"calorias": 52, "carboidratos": 11.9, "proteinas": 1.2, "gorduras": 0, "fibras": 1.3, "sodio": 2}
+}
+
+def calcular_nutrientes(alimento, quantidade):
+    informacoes = alimentos[alimento]
+    fator = quantidade / 100
+    return {nutriente: valor * fator for nutriente, valor in informacoes.items()}</code></pre>
+        </div>
+      </article>
+
+      <div class="page-footer-nav">
+        <a href="#introducao" data-page-link="introducao" class="btn btn-secondary">← Voltar ao Início</a>
+        <button class="btn btn-primary" data-go="robotica">Próxima Disciplina: Robótica →</button>
       </div>
     </section>
 
-    <section class="page" id="robotica" aria-labelledby="titulo-robotica">
-      <div class="page-banner banner-blue">
-        <span class="eyebrow">DISCIPLINA 02</span><h1 id="titulo-robotica">Robótica</h1>
-        <p>Componentes eletrônicos e programação para explorar diferentes formas de comunicação e acessibilidade.</p>
+    <!-- ==========================================================
+         PÁGINA 3: ROBÓTICA
+         ========================================================== -->
+    <section id="robotica" class="page">
+      <div class="page-header header-pink">
+        <span class="pill pill-pink">Disciplina 2</span>
+        <h2>ROBÓTICA — Tecnologia, Acessibilidade e Comunicação</h2>
+        <p>Desenvolvimento e simulação de três circuitos com Arduino Uno no Tinkercad para investigar diferentes canais sensoriais de comunicação.</p>
       </div>
-      <div class="container page-content">
-        <div class="section-heading left">
-          <span class="eyebrow">PROJETOS DESENVOLVIDOS</span><h2>Robótica e inclusão</h2>
-          <p>Foram explorados três projetos em simulações no Tinkercad, utilizando Arduino e componentes eletrônicos.</p>
+
+      <!-- PROJETO 1: MATRIZ DE LEDS -->
+      <article class="content-section">
+        <h3>Projeto 1 — Matriz de LEDs 8×8 (Comunicação Visual)</h3>
+        <div class="two-cols">
+          <div>
+            <p>
+              A matriz possui 64 LEDs organizados em 8 linhas e 8 colunas. Usando código binário (<code>1</code> para ligado e <code>0</code> para desligado) e as bibliotecas <code>LedControl</code> e <code>MatrizLed</code>, exibimos um rosto expressivo e a frase deslizante <em>"Como estou me sentindo"</em>.
+            </p>
+            <ul>
+              <li><strong>Pinos do Arduino:</strong> Pino 8 (Dados), Pino 10 (Clock), Pino 9 (Seleção CS).</li>
+              <li><strong>Acessibilidade:</strong> Ajuda na expressão de emoções e alertas visuais em locais barulhentos ou para pessoas surdas.</li>
+              <li><strong>Limitação:</strong> Tamanho reduzido limita textos longos e exige compreensão prévia dos símbolos.</li>
+            </ul>
+          </div>
+          <figure class="figure-box">
+            <img src="matriz-leds.png" alt="Simulação da Matriz de LEDs 8x8 ligada no Tinkercad">
+            <figcaption>Figura 1 — Simulação do projeto com Arduino Uno e matriz de LEDs 8×8 exibindo símbolo visual.</figcaption>
+          </figure>
         </div>
 
-        <article class="content-card">
-          <div class="activity-label blue-label">PROJETO 1</div>
-          <h2>▦ Matriz de LED 8×8</h2>
-          <p>A matriz de LED é composta por pequenos pontos luminosos organizados em linhas e colunas. A programação permite acender ou apagar cada ponto para formar imagens e símbolos.</p>
-          <h3>Componentes utilizados</h3>
-          <ul class="pretty-list"><li>Arduino Uno;</li><li>Matriz de LED 8×8;</li><li>Bibliotecas LedControl e MatrizLed;</li><li>Conexões nos pinos 8, 10 e 9.</li></ul>
-          <h3>Funcionamento</h3>
-          <p>O programa apresenta a frase “Como estou me sentindo” em movimento e utiliza uma sequência binária de 64 posições para formar uma figura na matriz. O valor 1 representa um LED aceso e o valor 0 representa um LED apagado.</p>
-          <div class="image-placeholder"><span>▧</span><strong>Imagem da matriz de LED</strong><small>Adicione aqui uma captura real da simulação no Tinkercad.</small></div>
-          <details class="code-details">
-            <summary>Visualizar código utilizado</summary>
-            <pre><code>#include &lt;LedControl.h&gt;
+        <div class="code-wrapper">
+          <div class="code-header">
+            <span>Código Arduino — Matriz de LEDs 8×8</span>
+            <button class="copy-btn" data-copy="code-matriz">Copiar código</button>
+          </div>
+          <pre><code id="code-matriz">#include &lt;LedControl.h&gt;
 #include &lt;MatrizLed.h&gt;
-
-#include &lt;Arduino.h&gt;
-#include &lt;Wire.h&gt;
-#include &lt;SoftwareSerial.h&gt;
 
 LedControl led = LedControl(8, 10, 9, 1);
 MatrizLed displayLCD;
-
-String isturnOn, figure2, isturnOn_2, figure2_2;
-
 String figure_1 = "0011110001000010101010011000010110000101101010010100001000111100";
 
-void _delay(float seconds) {
-  long endTime = millis() + seconds * 1000;
-  while(millis() &lt; endTime) _loop();
-}
-
 void setup() {
-  for(int i = 0; i &lt; 1 + 1; i++){
-    led.shutdown(i, false);
-  }
-
-  displayLCD.begin(8,10,9,1);
+  led.shutdown(0, false);
+  displayLCD.begin(8, 10, 9, 1);
   displayLCD.rotar(false);
   while(1) {
     displayLCD.borrar();
     displayLCD.escribirFraseScroll("Como estou me sentindo", 50);
-
-    for (int counter = 0; counter &lt; 8; counter++) {
-      figure2 = figure_1.substring(counter * 8, (counter + 1) * 8);
-      for (int counter2 = 0; counter2 &lt; 8; counter2++) {
-        isturnOn = figure2.substring(counter2, counter2 + 1);
-        if (isturnOn == "1") {
-          led.setLed(1 - 1, counter, 7 - counter2, true);
-        } else {
-          led.setLed(1 - 1, counter, 7 - counter2, false);
-        }
+    for (int counter = 0; counter < 8; counter++) {
+      String figure2 = figure_1.substring(counter * 8, (counter + 1) * 8);
+      for (int counter2 = 0; counter2 < 8; counter2++) {
+        led.setLed(0, counter, 7 - counter2, figure2.substring(counter2, counter2 + 1) == "1");
       }
     }
-    _delay(3);
-    _loop();
+    delay(3000);
   }
 }
+void loop() {}</code></pre>
+        </div>
+      </article>
 
-void _loop() {
-}</code></pre>
-          </details>
-        </article>
+      <!-- PROJETO 2: CÓDIGO MORSE -->
+      <article class="content-section">
+        <h3>Projeto 2 — Botão, LED e Buzzer (Estudo do Código Morse)</h3>
+        <div class="two-cols">
+          <div>
+            <p>
+              O Código Morse representa letras por sinais curtos (pontos) e longos (traços), como o pedido de socorro <strong>SOS (··· −−− ···)</strong>. No nosso circuito manual, ao pressionar o botão (<code>INPUT_PULLUP</code>), o LED acende e o buzzer emite um som de 800 Hz simultaneamente.
+            </p>
+            <ul>
+              <li><strong>Pinos do Arduino:</strong> Pino 2 (Buzzer), Pino 3 (Botão), Pino 4 (LED).</li>
+              <li><strong>Acessibilidade:</strong> Combina estímulo visual (luz) e sonoro (áudio), atendendo diferentes canais sensoriais.</li>
+              <li><strong>Limitação:</strong> Exige acionamento manual, conhecimento do código e pode causar desconforto em pessoas com hipersensibilidade sonora ou fotossensibilidade.</li>
+            </ul>
+          </div>
+          <figure class="figure-box">
+            <img src="codigo-morse.png" alt="Circuito com Arduino Uno, botão, LED e buzzer no Tinkercad">
+            <figcaption>Figura 2 — Circuito com Arduino Uno, botão, LED e buzzer para emissão conjunta de sinais luminosos e sonoros.</figcaption>
+          </figure>
+        </div>
 
-        <article class="content-card">
-          <div class="activity-label purple-label">PROJETO 2</div>
-          <h2>♫ Circuito de botão, LED e buzzer</h2>
-          <p>Este circuito utiliza um botão para controlar simultaneamente um LED e um buzzer. Ele demonstra uma forma simples de produzir sinais visuais e sonoros.</p>
-          <h3>Componentes utilizados</h3>
-          <ul class="pretty-list"><li>Arduino Uno;</li><li>Buzzer no pino 2;</li><li>Botão no pino 3;</li><li>LED no pino 4.</li></ul>
-          <h3>Funcionamento observado no código</h3>
-          <p>Quando o botão é pressionado, o LED acende e o buzzer emite um som contínuo. Quando o botão é solto, o LED apaga e o som para.</p>
-          <div class="info-box"><strong>Relação com o código Morse:</strong> o código Morse utiliza combinações de sinais curtos e longos para representar letras e números. O circuito desenvolvido demonstra um sinal sonoro e luminoso acionado por botão, mas não codifica automaticamente mensagens em Morse.</div>
-          <p>Como exemplo de representação em Morse, SOS corresponde a três sinais curtos, três longos e três curtos.</p>
-          <div class="image-placeholder"><span>▧</span><strong>Imagem do circuito com buzzer</strong><small>Adicione aqui uma captura real da simulação no Tinkercad.</small></div>
-          <details class="code-details">
-            <summary>Visualizar código utilizado</summary>
-            <pre><code>/* Programa: Código Morse */
-/* Definindo os pinos do Buzzer, botão e LED */
-int buzzer = 2;
+        <div class="code-wrapper">
+          <div class="code-header">
+            <span>Código Arduino — Código Morse</span>
+            <button class="copy-btn" data-copy="code-morse">Copiar código</button>
+          </div>
+          <pre><code id="code-morse">int buzzer = 2;
 int botao = 3;
 int LED = 4;
 
-void setup()
-{
-  /* Define os pinos do LED e Buzzer como saída */
+void setup() {
   pinMode(buzzer, OUTPUT);
   pinMode(LED, OUTPUT);
-
-  /* Define o pino do botão como entrada e ativa o resistor interno */
   pinMode(botao, INPUT_PULLUP);
 }
 
-void loop()
-{
-  /* Verifica se o botão está pressionado e então liga o LED e emite o som */
+void loop() {
   if (digitalRead(botao) == LOW) {
     digitalWrite(LED, HIGH);
     tone(buzzer, 800);
-  }
-
-  /* Senão desligue o LED e pare o som */
-  else {
+  } else {
     digitalWrite(LED, LOW);
     noTone(buzzer);
   }
 }</code></pre>
-          </details>
-        </article>
+        </div>
+      </article>
 
-        <article class="content-card">
-          <div class="activity-label yellow-label">PROJETO 3</div>
-          <h2>▤ Display LCD 16×2</h2>
-          <p>O display LCD 16×2 permite apresentar mensagens em duas linhas, com até 16 caracteres por linha. Pode ser utilizado para exibir informações de maneira visual.</p>
-          <h3>Componentes utilizados</h3>
-          <ul class="pretty-list"><li>Arduino Uno;</li><li>Display LCD 16×2;</li><li>Potenciômetro;</li><li>Resistor e fios de conexão.</li></ul>
-          <h3>Funcionamento</h3>
-          <p>O programa inicializa o display e apresenta duas mensagens. Depois, pode receber caracteres pela comunicação serial: o caractere % limpa a tela e posiciona o cursor na primeira linha; o caractere &gt; posiciona o cursor na segunda linha; outros caracteres são exibidos no LCD.</p>
-          <div class="image-placeholder"><span>▧</span><strong>Imagem do display LCD</strong><small>Adicione aqui uma captura real da simulação no Tinkercad.</small></div>
-          <details class="code-details">
-            <summary>Visualizar código utilizado</summary>
-            <pre><code>#include &lt;LiquidCrystal.h&gt;
+      <!-- PROJETO 3: DISPLAY LCD -->
+      <article class="content-section">
+        <h3>Projeto 3 — Display LCD 16×2 (Comunicação Textual)</h3>
+        <div class="two-cols">
+          <div>
+            <p>
+              O display LCD de 16 colunas e 2 linhas exibe mensagens escritas e recebe novos textos via Monitor Serial. Usamos um potenciômetro para ajustar o contraste da tela e os comandos especiais <code>%</code> (limpar tela) e <code>&gt;</code> (pular para a segunda linha).
+            </p>
+            <ul>
+              <li><strong>Pinos do Arduino:</strong> RS (12), E (11), D4 (5), D5 (4), D6 (3), D7 (2).</li>
+              <li><strong>Acessibilidade:</strong> Ideal para orientações escritas em hospitais, escolas e atendimentos públicos.</li>
+              <li><strong>Limitação:</strong> Tela pequena e caracteres fixos não atendem pessoas cegas (que precisam de leitores de tela ou áudio) nem quem tem baixa visão severa.</li>
+            </ul>
+          </div>
+          <figure class="figure-box">
+            <img src="display-lcd.png" alt="Simulação do Display LCD 16x2 exibindo texto no Tinkercad">
+            <figcaption>Figura 3 — Simulação do Arduino Uno conectado ao display LCD 16×2 exibindo mensagens textuais.</figcaption>
+          </figure>
+        </div>
 
-// Define os pinos do LCD:
-// RS, E, D4, D5, D6, D7
+        <div class="code-wrapper">
+          <div class="code-header">
+            <span>Código Arduino — Display LCD 16×2</span>
+            <button class="copy-btn" data-copy="code-lcd">Copiar código</button>
+          </div>
+          <pre><code id="code-lcd">#include &lt;LiquidCrystal.h&gt;
+
 LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
 
-void setup()
-{
+void setup() {
   Serial.begin(9600);
   lcd.begin(16, 2);
   lcd.clear();
@@ -349,139 +442,214 @@ void setup()
   lcd.print("eu amo 67...");
 }
 
-void loop()
-{
-  if (Serial.available() &gt; 0)
-  {
+void loop() {
+  if (Serial.available() > 0) {
     char cr = Serial.read();
-
-    if (cr == '%')
-    {
+    if (cr == '%') {
       lcd.clear();
       lcd.setCursor(0, 0);
-    }
-    else if (cr == '&gt;')
-    {
+    } else if (cr == '>') {
       lcd.setCursor(0, 1);
-    }
-    else
-    {
+    } else {
       lcd.print(cr);
     }
   }
 }</code></pre>
-          </details>
-        </article>
-
-        <article class="content-card">
-          <div class="activity-label green-label">APLICAÇÃO E ACESSIBILIDADE</div>
-          <h2>Como esses projetos podem contribuir?</h2>
-          <div class="comparison-grid">
-            <div class="comparison-box soft-blue"><h3>Matriz de LED</h3><p>Pode apresentar símbolos e mensagens visuais, contribuindo para a comunicação por imagens.</p></div>
-            <div class="comparison-box soft-pink"><h3>Sinais sonoros e luminosos</h3><p>Podem complementar avisos visuais e sonoros, oferecendo diferentes formas de perceber um alerta.</p></div>
-            <div class="comparison-box soft-yellow"><h3>Display LCD</h3><p>Pode exibir orientações e informações escritas de forma direta.</p></div>
-          </div>
-          <h3>Proposta de melhoria</h3>
-          <p>Uma possibilidade seria integrar mensagens no display LCD a alertas visuais e sonoros, permitindo que uma informação seja apresentada por mais de um canal. Essa integração é uma proposta conceitual, não um recurso construído e testado nos projetos apresentados.</p>
-        </article>
-
-        <div class="conclusion-card">
-          <span>✧</span>
-          <div><h2>Conclusão da disciplina</h2><p>Os projetos mostram como componentes simples podem transmitir informações por luz, som e texto. A escolha de diferentes formas de comunicação pode contribuir para ambientes mais acessíveis e inclusivos.</p></div>
         </div>
+      </article>
+
+      <!-- TABELA COMPARATIVA ROBÓTICA -->
+      <article class="content-section">
+        <h3>Comparação dos Três Recursos & Proposta de Integração</h3>
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Recurso</th>
+                <th>Tipo de Sinal</th>
+                <th>Possível Aplicação</th>
+                <th>Limitações e Adaptações</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Matriz de LEDs 8×8</strong></td>
+                <td>Visual (símbolos e ícones)</td>
+                <td>Expressar emoções rápidas, setas de direção ou alertas visuais silenciosos.</td>
+                <td>Baixa resolução para textos longos; exige símbolos intuitivos e padronizados.</td>
+              </tr>
+              <tr>
+                <td><strong>Botão, LED e Buzzer</strong></td>
+                <td>Visual + Sonoro</td>
+                <td>Campainhas acessíveis e alertas de emergência percebidos por luz e som.</td>
+                <td>Exige conhecimento prévio do Morse; precisa permitir desligar o som ou luz para evitar sobrecarga sensorial.</td>
+              </tr>
+              <tr>
+                <td><strong>Display LCD 16×2</strong></td>
+                <td>Textual (escrita)</td>
+                <td>Painéis de senha, instruções de atendimento e avisos em espaços públicos.</td>
+                <td>Letras pequenas e sem áudio; precisa de alto contraste e integração com voz para pessoas com deficiência visual.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="info-box">
+          <h4>Proposta Conceitual de Melhoria</h4>
+          <p>
+            Nenhum recurso isolado resolve todas as barreiras. Nossa proposta conceitual é integrar os três dispositivos em um <strong>painel escolar inclusivo</strong>: o Display LCD exibe a instrução escrita, a Matriz de LEDs reforça com um ícone visual universal e o Buzzer emite um alerta suave opcional (com chave seletora para ambientes silenciosos).
+          </p>
+        </div>
+      </article>
+
+      <div class="page-footer-nav">
+        <button class="btn btn-secondary" data-go="programacao">← Anterior: Programação</button>
+        <button class="btn btn-primary" data-go="fisica">Próxima Disciplina: Física e Tecnociência →</button>
       </div>
     </section>
-        <section class="page" id="tecnociencia" aria-labelledby="titulo-tecnociencia">
-      <div class="page-banner banner-green">
-        <span class="eyebrow">DISCIPLINA 03</span>
-        <h1 id="titulo-tecnociencia">Física e TecnoCiência</h1>
-        <p>Ciência do som: audição, acessibilidade e qualidade de vida.</p>
+
+    <!-- ==========================================================
+         PÁGINA 4: FÍSICA E TECNOCIÊNCIA
+         ========================================================== -->
+    <section id="fisica" class="page">
+      <div class="page-header header-blue">
+        <span class="pill pill-blue">Disciplina 3</span>
+        <h2>FÍSICA E TECNOCIÊNCIA — Ciência do Som e Acessibilidade</h2>
+        <p>Investigação sobre ondas sonoras, audição humana, níveis de ruído na escola e estratégias de conforto acústico e inclusão sensorial.</p>
       </div>
-      <div class="container page-content">
-        <div class="section-heading left">
-          <span class="eyebrow">INVESTIGAÇÃO CIENTÍFICA</span>
-          <h2>O ambiente sonoro da escola</h2>
-          <p>Uma análise dos níveis sonoros em diferentes espaços escolares e de sua relação com o conforto e a inclusão.</p>
+
+      <!-- CONCEITOS FÍSICOS -->
+      <article class="content-section">
+        <h3>Conceitos Físicos do Som e Audição</h3>
+        <div class="two-cols">
+          <div class="info-box">
+            <h4>Propagação, Frequência e Intensidade</h4>
+            <ul>
+              <li><strong>O que é o som:</strong> Uma onda mecânica produzida pela vibração de um corpo que precisa de um meio material (ar, água ou sólidos) para se propagar — não se propaga no vácuo.</li>
+              <li><strong>Frequência (Hz):</strong> Número de oscilações por segundo. Define se o som é <em>grave</em> (baixa frequência) ou <em>agudo</em> (alta frequência). A audição humana típica vai de <strong>20 Hz a 20.000 Hz</strong>.</li>
+              <li><strong>Intensidade e Decibéis (dB):</strong> Relacionada à energia da onda (som fraco ou forte). A escala em dB é <em>logarítmica</em>, ou seja, 80 dB não é apenas o dobro da energia de 40 dB.</li>
+            </ul>
+          </div>
+          <div class="info-box">
+            <h4>Saúde Auditiva e Hipersensibilidade</h4>
+            <p>
+              As ondas fazem o tímpano vibrar até a cóclea, onde viram sinais nervosos. A exposição prolongada a ruídos altos causa estresse, irritação, dificuldade de concentração e danos auditivos.
+            </p>
+            <p>
+              Além disso, pessoas com <strong>hipersensibilidade auditiva</strong> (como algumas pessoas autistas) podem sentir intenso desconforto em ambientes ruidosos ou com reverberação, tornando o conforto acústico uma questão de inclusão.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <!-- TABELA E GRÁFICO DAS MEDIÇÕES NA ESCOLA -->
+      <article class="content-section">
+        <h3>Medições Sonoras Realizadas na Escola</h3>
+        <p>
+          Utilizamos um aplicativo de decibelímetro em smartphone para registrar o nível sonoro médio em seis ambientes escolares, sem interferir nas aulas ou provocar ruídos intencionais.
+        </p>
+
+        <!-- TABELA PRONTA NO HTML -->
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Local</th>
+                <th>Horário</th>
+                <th>Média Registrada</th>
+                <th>Condições Observadas</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="row-high">
+                <td><strong>Pátio da escola</strong></td>
+                <td>07h45</td>
+                <td><span class="badge-db high">81 dB</span></td>
+                <td>Havia pessoas conversando e movimentação intensa (maior valor registrado).</td>
+              </tr>
+              <tr class="row-med">
+                <td><strong>Quadra coberta</strong></td>
+                <td>07h52</td>
+                <td><span class="badge-db med">75 dB</span></td>
+                <td>Havia uma turma na arquibancada; espaço amplo com reverberação.</td>
+              </tr>
+              <tr class="row-med">
+                <td><strong>Corredor das salas</strong></td>
+                <td>08h04</td>
+                <td><span class="badge-db med">71 dB</span></td>
+                <td>As portas das salas estavam abertas e havia aulas acontecendo simultaneamente.</td>
+              </tr>
+              <tr>
+                <td><strong>Sala de aula</strong></td>
+                <td>07h58</td>
+                <td><span class="badge-db low">51 dB</span></td>
+                <td>Estava vazia, apenas com os integrantes do grupo realizando a medição.</td>
+              </tr>
+              <tr>
+                <td><strong>Biblioteca</strong></td>
+                <td>08h08</td>
+                <td><span class="badge-db low">50 dB</span></td>
+                <td>Havia pessoas presentes, mas estavam quietas e respeitando o silêncio.</td>
+              </tr>
+              <tr>
+                <td><strong>Refeitório</strong></td>
+                <td>08h17</td>
+                <td><span class="badge-db low">50 dB</span></td>
+                <td>Estava vazio, sem pessoas no momento do registro.</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
 
-        <article class="content-card">
-          <h2>🔊 O que é o som?</h2>
-          <p>O som é uma onda mecânica produzida por vibrações. Ele precisa de um meio material, como o ar, a água ou sólidos, para se propagar. No ar, essas vibrações chegam aos nossos ouvidos e podem ser percebidas como sons.</p>
-          <div class="concept-grid">
-            <div><strong>Frequência</strong><span>Relaciona-se à quantidade de vibrações por segundo. É medida em hertz (Hz) e está ligada à percepção de sons graves e agudos.</span></div>
-            <div><strong>Intensidade</strong><span>Está relacionada à energia da onda sonora e à percepção de sons mais fracos ou mais fortes.</span></div>
-            <div><strong>Decibel (dB)</strong><span>Unidade utilizada para expressar níveis sonoros em uma escala logarítmica.</span></div>
-            <div><strong>Altura do som</strong><span>Um som grave tem frequência menor; um som agudo tem frequência maior.</span></div>
+        <!-- GRÁFICO GERADO PELO SCRIPT.JS -->
+        <h4>Comparativo Visual dos Níveis Sonoros (dB)</h4>
+        <div id="sound-chart" class="sound-chart"></div>
+
+        <p class="small-note">
+          <strong>Limitação metodológica:</strong> Aplicativos de smartphone fornecem estimativas comparativas que variam conforme o microfone e a posição do aparelho, não substituindo laudos técnicos profissionais.
+        </p>
+      </article>
+
+      <!-- PROPOSTAS DE MELHORIA -->
+      <article class="content-section">
+        <h3>Propostas de Melhoria para o Conforto Acústico Escolar</h3>
+        <div class="cards-grid two-cols">
+          <div class="card card-blue">
+            <h4>1. Materiais de Absorção Sonora</h4>
+            <p>Instalar painéis acústicos na quadra coberta e no refeitório para reduzir a reflexão e a reverberação das ondas sonoras.</p>
           </div>
-          <div class="info-box"><strong>Não confunda:</strong> grave e agudo descrevem a frequência do som. Fraco e forte descrevem sua intensidade percebida. São características diferentes.</div>
-        </article>
-
-        <article class="content-card">
-          <h2>👂 Audição, ruído e qualidade de vida</h2>
-          <p>A audição permite perceber sons e participar de situações de comunicação. A exposição a sons muito intensos ou por períodos prolongados pode prejudicar a saúde auditiva.</p>
-          <p>Ambientes ruidosos também podem dificultar a concentração, a compreensão da fala e o descanso, além de provocar desconforto e estresse em algumas pessoas.</p>
-          <h3>Acessibilidade auditiva</h3>
-          <p>Algumas pessoas, incluindo algumas pessoas autistas, podem apresentar maior sensibilidade a determinados estímulos sonoros. Isso varia de pessoa para pessoa. Por isso, é importante pensar em espaços que ofereçam conforto e diferentes formas de comunicação.</p>
-          <div class="comparison-grid">
-            <div class="comparison-box soft-pink"><h3>Possíveis dificuldades</h3><p>Ruídos intensos, conversas simultâneas e reverberação podem dificultar a compreensão de informações e gerar desconforto.</p></div>
-            <div class="comparison-box soft-blue"><h3>Cuidados e inclusão</h3><p>Reduzir ruídos desnecessários, oferecer sinalização visual e disponibilizar espaços tranquilos pode favorecer a participação de mais pessoas.</p></div>
+          <div class="card card-mint">
+            <h4>2. Organização de Ambientes e Portas</h4>
+            <p>Manter as portas das salas fechadas durante explicações e escalonar horários de atividades ruidosas nos corredores.</p>
           </div>
-        </article>
-
-        <article class="content-card">
-          <h2>📊 Medições realizadas na escola</h2>
-          <p>As medições foram realizadas com um aplicativo de decibéis em diferentes ambientes escolares. Os valores apresentados são médias (AVG) registradas durante a atividade.</p>
-          <div class="table-wrapper">
-            <table>
-              <thead><tr><th>Local</th><th>Horário</th><th>Média</th><th>Condições observadas</th></tr></thead>
-              <tbody>
-                <tr><td>Pátio da escola</td><td>07h45</td><td><strong>81 dB</strong></td><td>Havia pessoas conversando.</td></tr>
-                <tr><td>Quadra coberta</td><td>07h52</td><td><strong>75 dB</strong></td><td>Havia uma turma na arquibancada.</td></tr>
-                <tr><td>Sala de aula</td><td>07h58</td><td><strong>51 dB</strong></td><td>Estava vazia, apenas com os integrantes do grupo.</td></tr>
-                <tr><td>Corredor das salas</td><td>08h04</td><td><strong>71 dB</strong></td><td>As portas das salas estavam abertas e havia aulas acontecendo.</td></tr>
-                <tr><td>Biblioteca</td><td>08h08</td><td><strong>50 dB</strong></td><td>Havia pessoas, mas estavam quietas.</td></tr>
-                <tr><td>Refeitório</td><td>08h17</td><td><strong>50 dB</strong></td><td>Estava vazio, sem pessoas.</td></tr>
-              </tbody>
-            </table>
+          <div class="card card-lilac">
+            <h4>3. Espaço de Descompressão Sensorial</h4>
+            <p>Criar uma sala tranquila com baixo estímulo sonoro e regras claras de silêncio para estudantes com hipersensibilidade auditiva.</p>
           </div>
-          <div class="chart-card">
-            <h3>Comparação dos níveis sonoros</h3>
-            <p class="small-muted">Valores médios registrados em cada ambiente (dB).</p>
-            <div id="sound-chart" class="sound-chart" role="img" aria-label="Gráfico de barras com as médias de decibéis dos seis ambientes escolares"></div>
+          <div class="card card-yellow">
+            <h4>4. Sinalização Visual Complementar</h4>
+            <p>Acompanhar sinais sonoros (como o sinal de troca de aulas) com alertas visuais e placas informativas.</p>
           </div>
-          <h3>Análise dos resultados</h3>
-          <p>O maior valor registrado foi no pátio, com 81 dB. A quadra apresentou 75 dB e o corredor, 71 dB. Os menores valores foram registrados na biblioteca e no refeitório, ambos com 50 dB.</p>
-          <p>As diferenças podem estar relacionadas às atividades realizadas em cada local. No pátio havia pessoas conversando, na quadra havia uma turma na arquibancada e no corredor as portas das salas estavam abertas durante as aulas. A biblioteca estava quieta e o refeitório estava vazio.</p>
-          <div class="warning-box"><strong>Limitações:</strong> o aplicativo utiliza o microfone do celular e não substitui um equipamento profissional de medição acústica. Os resultados podem variar conforme o aparelho, a posição, a distância e as condições do ambiente. As medições representam registros pontuais, não uma avaliação completa da exposição sonora.</div>
-        </article>
-
-        <article class="content-card">
-          <h2>🌿 Propostas de melhoria</h2>
-          <div class="proposal-item"><span class="proposal-number">01</span><div><h3>Materiais que absorvem o som</h3><p>Estudar a utilização de materiais acústicos adequados em locais como quadras e refeitórios. Eles podem ajudar a reduzir a reverberação e melhorar o conforto sonoro.</p></div></div>
-          <div class="proposal-item"><span class="proposal-number">02</span><div><h3>Organização dos espaços</h3><p>Quando possível, manter as portas das salas fechadas durante as aulas e organizar atividades em horários e espaços adequados pode ajudar a diminuir a propagação de ruídos pelo corredor.</p></div></div>
-          <div class="proposal-item"><span class="proposal-number">03</span><div><h3>Espaço tranquilo e sinalização visual</h3><p>Disponibilizar um ambiente mais silencioso e utilizar placas visuais para orientar a comunidade escolar pode favorecer pessoas que precisam de menos estímulos sonoros.</p></div></div>
-        </article>
-
-        <article class="content-card">
-          <h2>🧠 Uso crítico da Inteligência Artificial</h2>
-          <p>A Inteligência Artificial pode auxiliar na organização de ideias, na explicação de conceitos e na construção de materiais informativos. Entretanto, as informações precisam ser verificadas em fontes confiáveis e adaptadas com compreensão própria.</p>
-          <p>As medições apresentadas são os registros da atividade. A IA não deve ser apresentada como responsável por realizar medições físicas no ambiente.</p>
-        </article>
-
-        <div class="conclusion-card">
-          <span>✧</span>
-          <div><h2>Conclusão da disciplina</h2><p>A investigação mostrou que os ambientes escolares apresentam diferentes níveis sonoros. Observar essas diferenças ajuda a refletir sobre conforto acústico, acessibilidade e possíveis melhorias para a convivência e a aprendizagem.</p></div>
         </div>
+      </article>
+
+      <div class="page-footer-nav">
+        <button class="btn btn-secondary" data-go="robotica">← Anterior: Robótica</button>
+        <a href="#introducao" data-page-link="introducao" class="btn btn-primary">Concluir e Voltar ao Início ↑</a>
       </div>
     </section>
+
   </main>
 
+  <!-- RODAPÉ -->
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <div><a class="brand footer-brand" href="#inicio" data-page-link="inicio"><span class="brand-mark">✿</span> Projeto Integrador</a><p>Tecnologia, acessibilidade e qualidade de vida.</p></div>
-      <p class="footer-note">Trabalho escolar · 2026</p>
-    </div>
+    <p>Projeto Integrador — 2º Ano do Ensino Médio • Programação, Robótica e Física/Tecnociência</p>
+    <p class="small-note">Uso transparente de IA: ferramentas de Inteligência Artificial apoiaram a organização textual e estruturação do código, com revisão e medições reais realizadas pela equipe.</p>
   </footer>
-  <button id="back-to-top" class="back-to-top" type="button" aria-label="Voltar ao topo">↑</button>
+
+  <!-- BOTÃO VOLTAR AO TOPO -->
+  <button id="back-to-top" class="back-to-top" aria-label="Voltar ao topo">↑</button>
+
+  <script src="script.js"></script>
 </body>
 </html>
