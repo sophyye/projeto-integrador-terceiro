@@ -68,6 +68,27 @@ menuToggle.addEventListener("click", () => {
 });
 
 // ========================================
+// BOTÕES DE COPIAR CÓDIGO
+// ========================================
+
+document.querySelectorAll(".copy-btn").forEach(button => {
+  button.addEventListener("click", () => {
+    const targetId = button.dataset.copy;
+    const codeElement = document.getElementById(targetId);
+
+    if (!codeElement) return;
+
+    navigator.clipboard.writeText(codeElement.textContent).then(() => {
+      const originalText = button.textContent;
+      button.textContent = "Copiado!";
+      setTimeout(() => {
+        button.textContent = originalText;
+      }, 2000);
+    });
+  });
+});
+
+// ========================================
 // CALCULADORA NUTRICIONAL
 // ========================================
 
@@ -82,7 +103,6 @@ const foods = {
     fiber: 1.6,
     sodium: 1
   },
-
   feijao: {
     name: "Feijão carioca cozido",
     calories: 76,
@@ -92,7 +112,6 @@ const foods = {
     fiber: 8.5,
     sodium: 2
   },
-
   frango: {
     name: "Frango grelhado",
     calories: 159,
@@ -102,7 +121,6 @@ const foods = {
     fiber: 0,
     sodium: 50
   },
-
   banana: {
     name: "Banana",
     calories: 98,
@@ -112,7 +130,6 @@ const foods = {
     fiber: 2,
     sodium: 0
   },
-
   maca: {
     name: "Maçã",
     calories: 56,
@@ -122,7 +139,6 @@ const foods = {
     fiber: 1.3,
     sodium: 0
   },
-
   ovo: {
     name: "Ovo cozido",
     calories: 146,
@@ -132,7 +148,6 @@ const foods = {
     fiber: 0,
     sodium: 146
   },
-
   batata: {
     name: "Batata cozida",
     calories: 52,
@@ -153,7 +168,6 @@ const clearButton = document.getElementById("clear-foods");
 const nutritionMessage = document.getElementById("nutrition-message");
 const foodList = document.getElementById("food-list");
 
-// Adiciona um alimento à lista.
 function addFood() {
   const foodKey = foodSelect.value;
   const grams = Number(foodGrams.value);
@@ -178,14 +192,10 @@ function addFood() {
   });
 
   foodGrams.value = "";
-
-  nutritionMessage.textContent =
-    `${food.name} adicionado com sucesso!`;
-
+  nutritionMessage.textContent = `${food.name} adicionado com sucesso!`;
   updateNutrition();
 }
 
-// Calcula os totais nutricionais.
 function updateNutrition() {
   const totals = {
     calories: 0,
@@ -213,22 +223,17 @@ function updateNutrition() {
     entry.className = "food-entry";
 
     const description = document.createElement("span");
-    description.textContent =
-      `${item.name} — ${formatNumber(item.grams)} g`;
+    description.textContent = `${item.name} — ${formatNumber(item.grams)} g`;
 
     const removeButton = document.createElement("button");
     removeButton.className = "remove-food";
     removeButton.type = "button";
     removeButton.textContent = "Remover";
-    removeButton.setAttribute(
-      "aria-label",
-      `Remover ${item.name}`
-    );
+    removeButton.setAttribute("aria-label", `Remover ${item.name}`);
 
     removeButton.addEventListener("click", () => {
       selectedFoods.splice(index, 1);
-      nutritionMessage.textContent =
-        "Alimento removido da lista.";
+      nutritionMessage.textContent = "Alimento removido da lista.";
       updateNutrition();
     });
 
@@ -239,29 +244,22 @@ function updateNutrition() {
 
   document.getElementById("total-calories").textContent =
     formatNumber(totals.calories);
-
   document.getElementById("total-carbs").textContent =
     `${formatNumber(totals.carbs)} g`;
-
   document.getElementById("total-protein").textContent =
     `${formatNumber(totals.protein)} g`;
-
   document.getElementById("total-fat").textContent =
     `${formatNumber(totals.fat)} g`;
-
   document.getElementById("total-fiber").textContent =
     `${formatNumber(totals.fiber)} g`;
-
   document.getElementById("total-sodium").textContent =
     `${formatNumber(totals.sodium)} mg`;
 }
 
-// Formata números com até duas casas decimais.
 function formatNumber(number) {
   return Number(number.toFixed(2)).toLocaleString("pt-BR");
 }
 
-// Eventos dos botões da calculadora.
 calculateButton.addEventListener("click", addFood);
 
 clearButton.addEventListener("click", () => {
@@ -302,8 +300,6 @@ function createSoundChart() {
 
     const fill = document.createElement("div");
     fill.className = "chart-fill";
-
-    // A largura é proporcional ao valor medido.
     fill.style.width = `${(measurement.value / 100) * 100}%`;
 
     track.appendChild(fill);
